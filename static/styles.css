@@ -1,1 +1,16 @@
+
+input.input-box {
+	background-color: yellow;
+}
+
+p.stuff {
+	border:3px solid gray;
+	color: #00008B;
+	text-align: center;
+} 
+
+#lastname {
+	font-weight: bold;		
+}
+
 /* Your styles can go here. */
