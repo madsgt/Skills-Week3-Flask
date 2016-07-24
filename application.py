@@ -23,15 +23,18 @@ def index_page():
     #
     # return render_template("index.html")
 
-@app-route("/application-form")
+@app.route("/application-form")
+def application_form():
 
-    """Show application form and collect user input"""
+    """Show application form and collect user input."""
 
     return render_template("application-form.html")
 
-@app-route("/application" method=['POST'])
 
-    """Post Application form response and details """
+@app.route("/application", methods=['POST'])
+def application_response():
+
+    """Post Application form response and details."""
 
     print "Thank You for submitting the details!"
 
@@ -43,7 +46,7 @@ def index_page():
     # Return response - Thank you, {{}} {{}}, for applying to be a {{}}. Your
     # minimum salary requirement is {{}} dollars
 
- return render_template("application-response.html", firstname=firstname, lastname=lastname, jobtitle=jobtitle, salary=salary)
+    return render_template("application-response.html", firstname=firstname, lastname=lastname, jobtitle=jobtitle, salary=salary)
 
 
 
